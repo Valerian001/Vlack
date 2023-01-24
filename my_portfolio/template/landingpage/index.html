@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'images\icons\Favicon.svg' %}" sizes="any" type="image/svg+xml">
     <title>Vlack</title>
+    <link rel="stylesheet" href="{% static 'css/Responsive.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
 </head>
 <body>
     <!---preloader--->
@@ -36,5 +36,26 @@
             </svg>
         </div>
     </div>
+    <!-- navbar -->
+    <div class="navbar" id="navbar">
+
+        <div class="logo"><img src="{% static 'images\icons\logo1.svg' %}" alt=""></div>
+            <!--HamBurger Icon-->
+            <div class="bars" id="nav_action">
+                <span class="bar"> </span>
+            </div>
+            <div class="menu" id="menu">
+                <ul> 
+                    <li class="shape-circle circle-five"><a href="/">Home              </a></li>
+                    <li class="shape-circle circle-four"><a href="/">About me</a></li>
+                    <li class="shape-circle circle-three"><a href="/">Services</a></li>
+                    <li class="shape-circle circle-two"><a href="/">Portfolio</a></li>
+                    <li class="shape-circle circle-one"><a href="/">Contact</a></li>
+                </ul>
+               
+            </div>
+
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
