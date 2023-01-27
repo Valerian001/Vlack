@@ -166,7 +166,7 @@ transform: translateY(9px);
 background-color: transparent;
 }
 
-.bars.active span::before {
+.bars.active span::before {w
 animation: top-bar 1s;
 animation-fill-mode: forwards;
 }
