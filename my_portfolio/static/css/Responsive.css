@@ -10,6 +10,7 @@
     }
     .bars{
         display: block;
+        right: 0;
     }
     .visible{
         z-index: 100 !important;
@@ -105,6 +106,9 @@
         line-height: 85vw !important;
         display: block;
         text-indent: -50% !important;
+    }
+    .hero{
+        padding-top: 50px;
     }
 
 }
