@@ -106,7 +106,7 @@ li{
     width: 100%;
     z-index: 200;
     position: sticky;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 
 }
@@ -337,4 +337,21 @@ animation-fill-mode: forwards;
 }
 .content a:hover{
     letter-spacing: 0.2em;
+}
+.column_right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.column_right .intro h1{
+    margin-top: 15px;
+}
+.column_right .intro h2{
+    letter-spacing: 2px;
+    font-size: x-large;
+}
+.column_right .intro p{
+    inline-size: 70%;
+    margin-top: 15px;
+    font-size: 1.12em;
 }
