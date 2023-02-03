@@ -105,9 +105,7 @@ li{
     color: #fff;
     width: 100%;
     z-index: 200;
-    position: sticky;
-    /* overflow: hidden; */
-
+    position: fixed;
 
 }
 .menu a{
@@ -210,20 +208,24 @@ animation-fill-mode: forwards;
   }
   
 /* HEro */
-
+.hero{
+    height: 90vh;
+    width: 100%;
+    background: #000;
+    position: relative;
+}
 .row{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #000;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     color: #fff;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    position: absolute;
-    top: 0;
+    position: relative;
 }
 .column{
     flex: 50%;
@@ -245,19 +247,6 @@ animation-fill-mode: forwards;
     box-shadow:  0 0 25px 0 rgba(217, 217, 217, 0.18);
 
 }
-/* .box::before{
-    content:'';
-    position: absolute;
-    inset: -10px 140px;
-    background: linear-gradient(315deg,black, red);
-    transition: 0.5s;
-    animation: animate 4s linear infinite;
-
-}
-.box:hover::before{
-    inset: -20px 0px;
-} */
-
 @keyframes animate{
     0%{
         transform: rotate(0deg);
@@ -357,21 +346,24 @@ animation-fill-mode: forwards;
 }
 .mouse_container{
     display: flex;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #000;
     width: 100%;
-    height: auto;
-    transform: scale(0.85);
+    height: calc(100vh - 85vh);
+    color: #fff;
+    justify-content: center;
+    align-items: flex-end;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 100;
 }
 .mouse_scroll {
-	display: block;
-	margin: 0 auto;
-	width: 24px;
-	height: 100px;
-	margin-top: 125px;
-    
+    display: inline-block;
+    transform: scale(0.85);
+    margin-bottom: 10px;
 }
 
 
@@ -398,7 +390,7 @@ animation-fill-mode: forwards;
   margin-top: 1px;
 }
 
-.unu, .doi, .trei
+.unu
 {
     -webkit-animation: mouse-scroll 1s infinite;
     -moz-animation: mouse-scroll 1s infinite;
@@ -414,31 +406,6 @@ animation-fill-mode: forwards;
   
   animation-direction: alternate;
   animation-delay: alternate;
-}
-
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
-
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .3s;
-  animation-direction: alternate;
-  
-  
-  margin-top: -6px;
 }
 
 .mouse {
