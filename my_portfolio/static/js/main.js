@@ -90,3 +90,66 @@ var TxtRotate = function(el, toRotate, period) {
     document.body.appendChild(css);
   };
 
+
+  // gif_image_icons
+  // function gifImg(e){
+  //   e.src = "/static/images/icons/shopping.gif"
+  // }
+  // function staImg(e){
+  //   e.src = "/static/images/icons/shopping.png"
+  // }
+
+   // Progress bars
+  //  $(document).ready(function() {
+  //   $( function() {
+  //     var progressbar = $( ".progress" ),
+  //     progressLabel = $( ".progress-value" );
+   
+  //     progressbar.progressbar({
+  //       value: false,
+  //       change: function() {
+  //         progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+  //       },
+  //       complete: function() {
+  //         progressLabel.text( "Complete!" );
+  //       }
+  //     });
+   
+  //     function progress() {
+  //       var val = progressbar.progressbar( "value" ) || 0;
+   
+  //       progressbar.progressbar( "value", val + 2 );
+   
+  //       if ( val < 99 ) {
+  //         setTimeout( progress, 80 );
+  //       }
+  //     }
+   
+  //     setTimeout( progress, 2000 );
+  //   } );
+  // });
+  //  document.ready(function() {
+  //   document.querySelector('.progress-value').css("width",
+  //             function() {
+  //                 return document.querySelector(this).attr("aria-valuenow") + "%";
+  //             }
+  //     )
+  // });
+//   var i = 0;
+// function move() {
+//   if (i == 0) {
+//     i = 1;
+//     var elem = document.getElementById("progressv");
+//     var width = elem.innerHTML();
+//     var id = setInterval(frame, 10);
+//     function frame() {
+//       if (width >= 100) {
+//         clearInterval(id);
+//         i = 0;
+//       } else {
+//         width++;
+//         elem.style.width = width + "%";
+//       }
+//     }
+//   }
+// }
