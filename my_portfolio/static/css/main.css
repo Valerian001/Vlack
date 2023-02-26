@@ -552,8 +552,8 @@ animation-fill-mode: forwards;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* background-color: #000; */
-    background-image: linear-gradient(145deg,rgba(0,0,0,0.958420868347339) 66%, rgba(27,182,231,0.4234068627450981) 90%);
+    background-color: #000;
+    /* background-image: #000; */
     width: 100%;
     height: 100vh;
     color: #fff;
@@ -610,7 +610,8 @@ animation-fill-mode: forwards;
     width: 100%;
 }
 .progress {
-    background: rgba(255,255,255,0.1);
+    /* background: rgba(255,255,255,0.1); */
+    background-image: linear-gradient(145deg,rgba(0,0,0,0.958420868347339) 36%, rgba(27,182,231,0.4234068627450981) 90%);
     justify-content: flex-start;
     border-radius: 100px;
     align-items: center;
@@ -628,7 +629,7 @@ animation-fill-mode: forwards;
     background: rgba(82, 151, 255, 1);
     height: 20px;
     width: 0;
-    color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -696,8 +697,16 @@ animation-fill-mode: forwards;
 .row3 h2{
     text-align: center;
     font-size: 35px;
-    margin-bottom: 25px;
     color: #fff;
+}
+.row3 .under{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: #fff;
+    width: 30%;
+    height: 20px;
 }
 .row3 .services{
     justify-content: space-around;
@@ -748,4 +757,74 @@ animation-fill-mode: forwards;
     font-weight: 500;
     color: rgba(82, 151, 255, 1);
     transition: 0.3s;
+}
+
+.seccounter{
+    position: relative;
+    color: black;
+    background: #000;
+    padding-top: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.row4{
+    width: 80%;
+    position: relative;
+}
+.row4 .count{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row4 .count .card{
+    width: 200px;
+    height: 180px;
+    background-image: linear-gradient(145deg,rgba(0,0,0,0.958420868347339) 46%, rgba(27,182,231,0.4234068627450981) 90%);
+    padding: 20px 15px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+    box-shadow: 3px 4px 3px 0px rgba(255, 255, 255, 0.5);
+}
+.row4 .count .card .content4{
+    transition: 0.3s;
+    position: relative;
+}
+.row4 .count .card:hover .content4{
+    transform: scale(1.07);
+}
+
+.row4 .count .card .content4 .icon{
+    padding: 5px 0;
+    color: white;
+}
+
+.row4 .count .card .content4 .icon img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.row4 .count .card .content4 .title{
+    padding: 5px 0;
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+    text-align: center;
+}
+.row4 .count .card .content4 p{
+    font-size: 45px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+    text-align: center;
 }

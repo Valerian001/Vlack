@@ -131,38 +131,38 @@
                     <h2 class="pri_underline">Design Skills</h2>
                         <span id="skill">UI/UX design</span>
                     <div class="progress">
-                        <span id="inc">76%</span>
+                        <span id="inc" data-max="76">%</span>
                         <div class="progress-value" style="width: 76%;"></div>
                     </div>
                     <span id="skill">Logo design</span>
                     <div class="progress">
-                        <span id="inc">50%</span>
-                        <div class="progress-value" style="width: 50%;"></div>
+                        <span id="inc" data-max="50">%</span>
+                        <div class="progress-value" style="width: 70%;"></div>
                     </div>
                     <h2 class="pri_underline">Coding Skills</h2>
                     <span id="skill">HTML/CSS</span>
                     <div class="progress">
-                        <span id="inc">100%</span>
+                        <span id="inc" data-max="100">%</span>
                         <div class="progress-value" style="width: 100%;"></div>
                     </div>
                     <span id="skill">JAVASCRIPT</span>
                     <div class="progress">
-                        <span id="inc">70%</span>
+                        <span id="inc" data-max="70">%</span>
                         <div class="progress-value" style="width: 70%;"></div>
                     </div>
                     <span id="skill">PYTHON</span>
                     <div class="progress">
-                        <span id="inc">90%</span>
+                        <span id="inc" data-max="90">%</span>
                         <div class="progress-value" style="width: 90%;"></div>
                     </div>
                     <span id="skill">DJANGO</span>
                     <div class="progress">
-                        <span id="inc">85%</span>
+                        <span id="inc" data-max="85">%</span>
                         <div class="progress-value" style="width: 85%;"></div>
                     </div>
                     <span id="skill">WEB development</span>
                     <div class="progress">
-                        <span id="inc">93%</span>
+                        <span id="inc" data-max="93">%</span>
                         <div class="progress-value" style="width: 93%;"></div>
                     </div>
                 </div>
@@ -170,10 +170,11 @@
         </div>
 
     </div>
-
+    <!-- service -->
     <div id="services" class="ser">
        <div class="row3">
             <h2>Services</h2>
+            <img class="under" src="{% static 'images\icons\under.svg'%}" alt="">
             <section class="services">
                 <div class="card card1">
                     <div class="content3">
@@ -282,7 +283,43 @@
                 </div>
 
             </section>
+
        </div>
+    </div>
+    <!-- counter -->
+    <div class="seccounter">
+        <div class="row4">
+            <section class="count">
+                <div class="card">
+                    <div class="content4">
+                        <div class="icon"><img src="{% static 'images\icons\heart.png'%}" alt="image description" width="50" height="50"></div>
+                        <div class="title">Happy Clients</div>
+                        <p data-max="500"> </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content4">
+                        <div class="icon"><img src="{% static 'images\icons\layers.png'%}" alt="image description" width="50" height="50"></div>
+                        <div class="title">Projects Completed</div>
+                        <p data-max="500"> </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content4">
+                        <div class="icon"><img src="{% static 'images\icons\time-forward.png'%}" alt="image description" width="50" height="50"></div>
+                        <div class="title">Working Hours/month</div>
+                        <p data-max="180"> </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content4">
+                        <div class="icon"><img src="{% static 'images\icons\shield.png'%}" alt="image description" width="50" height="50"></div>
+                        <div class="title">Lines of code</div>
+                        <p data-max="50000"> </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -441,6 +478,69 @@ $(document).ready(function(){
         }
 
     );
+
+    function inVisible(element) {
+  //Checking if the element is
+  //visible in the viewport
+  var WindowTop = $(window).scrollTop();
+  var WindowBottom = WindowTop + $(window).height();
+  var ElementTop = element.offset().top;
+  var ElementBottom = ElementTop + element.height();
+  //animating the element if it is
+  //visible in the viewport
+  if ((ElementBottom <= WindowBottom) && ElementTop >= WindowTop)
+    animate(element);
+}
+
+function animate(element) {
+  //Animating the element if not animated before
+  if (!element.hasClass('ms-animated')) {
+    var maxval = element.data('max');
+    var html = element.html();
+    element.addClass("ms-animated");
+    $({
+      countNum: element.html()
+    }).animate({
+      countNum: maxval
+    }, {
+      //duration 5 seconds
+      duration: 2090,
+      easing: 'linear',
+      step: function() {
+        element.html(Math.floor(this.countNum) + html);
+      },
+      complete: function() {
+        element.html(this.countNum + html);
+      }
+    });
+  }
+
+}
+
+//When the document is ready
+$(function() {
+  //This is triggered when the
+  //user scrolls the page
+  $(window).scroll(function() {
+    //Checking if each items to animate are 
+    //visible in the viewport
+    $("p[data-max]").each(function() {
+      inVisible($(this));
+    });
+  })
+});
+//When the document is ready
+$(function() {
+  //This is triggered when the
+  //user scrolls the page
+  $(window).scroll(function() {
+    //Checking if each items to animate are 
+    //visible in the viewport
+    $("span[data-max]").each(function() {
+      inVisible($(this));
+    });
+  })
+});
 </script>
     <script src="{% static 'js/main.js' %}"></script>
 
