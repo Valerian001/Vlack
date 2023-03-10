@@ -843,18 +843,17 @@ animation-fill-mode: forwards;
     height: 400px;
     margin: 0 30px;
     background: #8C8;
-    background-image: linear-gradient(145deg,rgba(204, 203, 203, 0.958) 46%, rgba(27,182,231,0.4234068627450981) 90%);
+    background-image: linear-gradient(145deg,rgba(0, 0, 0, 0.958) 46%, rgba(27,182,231,0.4234068627450981) 90%);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-bottom: 40px;
 }
 .works .row5 .main-carousel .cell img{
     width: 100%;
-    /* height: inherit;
-    object-fit: cover; */
+    object-fit: cover;
     vertical-align: middle;
+    object-position: center;
 
 }
 .works .row5 .header{
@@ -868,7 +867,7 @@ animation-fill-mode: forwards;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 5px;
+  margin-right: 10px;
   color: #1BB6E7;
   transition: 0.5s ease-in-out;
 }
@@ -878,6 +877,12 @@ animation-fill-mode: forwards;
 
   
 }
+.works .row5 .header .pri_underline::after{
+  width: 82px;
+  right: 8%;
+}
+
+
 .flickity-button {
   background: #D9D9D9;
 }
@@ -902,10 +907,12 @@ animation-fill-mode: forwards;
 .flickity-prev-next-button.previous {
   left: 50%;
   transform: translateX(-50%);
+  margin-right: 5px;
 }
 .flickity-prev-next-button.next {
-  left: 50%;
+  right: -50%;
   transform: translateX(-50%);
+  margin-left: 5px;
 }
 .flickity-page-dots {
   display: none;
@@ -925,7 +932,7 @@ animation-fill-mode: forwards;
     margin-left: auto;
     margin-bottom: auto;
     margin-top: -24.5%;
-    border-radius: 95px;
+    border-radius: 75px;
 }
 .works .row5 .textblock .title{
     text-align: start;
