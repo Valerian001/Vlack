@@ -988,6 +988,68 @@ animation-fill-mode: forwards;
     66.64%,79.3% {top: -123.5px;}
     83.3%,95.96% {top: -66px;}
   }
+  .row6{
+    position: relative;
+    background-color: red;
+    padding-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  form{
+    width: 90%;
+    max-width: 600px;
+  }
+  form .input-group{
+    
+
+
+  }
+  form .input-group{
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid black;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+  }
+  form .input-group input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  form .input-group input:focus{
+    border: none;
+
+  }
+  form .input-group img{
+    width: 18px;
+    height: 18px;
+  }
+  form button{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+  }
+  .subrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .subrow .input-group{
+    flex-basis: 48%;
+  }
+  form .input-group input:focus~label{
+    display: none;
+  }
   /* animation snippet */
   /* @keyframes animation {
     0% {
