@@ -54,7 +54,7 @@
                     <li class="shape-circle circle-four"><a href="#about">About me</a></li>
                     <li class="shape-circle circle-three"><a href="#services">Services</a></li>
                     <li class="shape-circle circle-two"><a href="#works">Portfolio</a></li>
-                    <li class="shape-circle circle-one"><a href="/" class="cnt">Contact</a></li>
+                    <li class="shape-circle circle-one"><a href="#contact" class="cnt">Contact</a></li>
                 </ul>
                
             </div>
@@ -376,39 +376,106 @@
 
     <div class="contact" id="contact">
         <div class="row6">
-            <section class="form">
-                <form action="/your-name/" method="post">
-                    <div class="subrow">
-                        <div class="input-group">
-                            <img src="{% static 'images\icons\user_1.png'%}" alt="">
-                            <input id="name" type="text" name="your_name" value="{{ current_name }}" placeholder="full name">
-                        </div>
-                        <div class="input-group">
-                            <img src="{% static 'images\icons\envelope.png'%}" alt="">
-                            <input id="email" type="email" name="your_name" value="{{ current_name }}">
-                        </div>
-                    </div>
-                    <div class="subrow">
-                        <div class="input-group">
-                            <img src="{% static 'images\icons\mobile-button.png'%}" alt="">
-                            <input id="phone" type="text" name="your_name" value="{{ current_name }}">
-                        </div>
-                        <div class="input-group">
-                            <img src="{% static 'images\icons\city.png'%}" alt="">
-                            <input id="company" type="text" name="your_name" value="{{ current_name }}">
-                        </div>
+            <div class="contact_container">
+                <section class="contact_details">
+                    <div class="smbox_header">
+                        <h2>Contact us</h2>
+                        <p>Do you have a question, an idea, or a project you need help with?</p>
+                        <p>Get in touch,we look forward to hearing from you</p>
+
                     </div>
                     
-                    
-                    <div class="input-group">
-                        <img src="{% static 'images\icons\comments.png'%}" alt="">
-                        <textarea name="" id="message" cols="30" rows="8"></textarea>
+                    <div class="smbox">
+                        <img src="{% static 'images\icons\whatsapp.png'%}" alt="" width="30px" height="30px">
+                        <div class="smmbox">
+                            <span>Call or Message us on</span>
+                            <a href="tel:+234 805 896 9978">+234 805 896 9978</a>
+                        </div>
                     </div>
-                   
-                    <button type="submit">Submit</button>
-                </form>
-                
-            </section>
+                    <div class="smbox">
+                        <img src="{% static 'images\icons\envelope1.png'%}" alt="" width="30px" height="30px">
+                        <div class="smmbox">
+                            <span>Email Us</span>
+                            <a href="mailto:ValerianVlk.dev@gmail.com">ValerianVlk.dev@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="">
+                            <span>
+                                <img src="{% static 'images\icons\instagram.png'%}" alt="" width="20px" height="20px">
+                            </span>
+                            <span>
+                                Instagram
+                            </span>
+                        </a>
+                        <a href="">
+                            <span>
+                                <img src="{% static 'images\icons\facebook.png'%}" alt="" width="20px" height="20px">
+                            </span>
+                            <span>
+                                Facebook
+                            </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/chinecherem-amutaeme-002633208">
+                            <span>
+                                <img src="{% static 'images\icons\linkedin.png'%}" alt="" width="20px" height="20px">
+                            </span>
+                            <span>
+                                LinkedIn
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/Chris_valerian">
+                            <span>
+                                <img src="{% static 'images\icons\twitter.png'%}" alt="" width="20px" height="20px">
+                            </span>
+                            <span>
+                                Twitter
+                            </span>
+                        </a>
+
+                    </div>
+                </section>
+                <section class="form">
+                    <form action="/your-name/" method="post">
+                        <div class="form_header">
+                            <h1>Send a Message</h1>
+                            <h3>Feel free to reach us if you need any assistance.</h3>
+                        </div>
+                        <div class="subrow">
+                            <div class="input-group">
+                                <img src="{% static 'images\icons\user_1.png'%}" alt="">
+                                <input id="name" type="text" name="your_name" value="{{ current_name }}" placeholder="Full Name">
+                            </div>
+                            <div class="input-group">
+                                <img src="{% static 'images\icons\envelope.png'%}" alt="">
+                                <input id="email" type="email" name="your_name" value="{{ current_name }}"placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="subrow">
+                            <div class="input-group">
+                                <img src="{% static 'images\icons\mobile-button.png'%}" alt="">
+                                <input id="phone" type="text" name="your_name" value="{{ current_name }}" placeholder="Phone Number">
+                            </div>
+                            <div class="input-group">
+                                <img src="{% static 'images\icons\city.png'%}" alt="">
+                                <input id="company" type="text" name="your_name" value="{{ current_name }}" placeholder="Company Name">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="input-group">
+                            <img src="{% static 'images\icons\comments.png'%}" alt="">
+                            <textarea name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+                        </div>
+                       
+                        <button type="submit">Submit</button>
+                    </form>
+                    
+                </section>
+
+            </div>
+
+
         </div>
     </div>
 

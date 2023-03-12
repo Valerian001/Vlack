@@ -925,8 +925,8 @@ animation-fill-mode: forwards;
     width: 88%;
     text-align: start;
     justify-content: start;
-    padding-right: 2px;
-    padding-left: 2px;
+    padding-right: 15px;
+    padding-left: 30px;
     padding-top: 26%;
     margin-right: auto;
     margin-left: auto;
@@ -990,39 +990,177 @@ animation-fill-mode: forwards;
   }
   .row6{
     position: relative;
-    background-color: red;
-    padding-top: 7%;
+    background-color: #000;
+    padding-top: 10%;
+    /* padding-bottom: 7%; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+  .contact_container{
+    width: 90%;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px;
+    background-color: #1BB6E7;
+  }
+  .contact_container .contact_details{
+    flex: 50%;
+    line-height: initial;
+    letter-spacing: 0.02em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .contact_container .contact_details .smbox_header{
+    align-self: center;
+    inline-size: 85%;
+    flex-wrap: wrap;
+  }
+  .contact_container .contact_details .smbox_header h2{
+    font-weight: 700;
+    font-size: 35px;
+  }
+  .contact_container .contact_details .smbox_header h2,p{
+    margin-bottom: 10px;
+  }
+  .contact_container .contact_details .smbox{
+    margin: 22px 0;
+    background: rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-self: center;
+    align-items: center;
+    justify-content: start;
+  }
+  .contact_container .contact_details .smbox .smmbox{
+    display: flex;
+    line-height: initial;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+.contact_container .contact_details .smbox .smmbox span{
+  line-height: 1px;
+  font-size: 15px;
+}
+
+  .contact_container .contact_details .smbox .smmbox a{
+    color: #fff;
+    line-height: 1.4px;
+    font-weight: 700;
+    margin-top: 18px;
+      
+    }
+.contact_container .contact_details .socials{
+  display: inline-flex;
+  justify-content: space-between;
+ } 
+.contact_container .contact_details .socials a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  width: 25%;
+  margin: 10px 10px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid black;
+  color: #000;
+  border-radius: 15px;
+  transition:background-color 0.5s cubic-bezier(0.4,0,0,1) 0.5ms;
+}
+.contact_container .contact_details .socials a span:first-child{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  transition: 0.5s ease-in-out;
+}
+.contact_container .contact_details .socials a span:last-child{
+  position: absolute;
+  text-align: center;
+  transform:translateY(200%);
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+.contact_container .contact_details .socials a:hover{
+  background-color: #1BB6E7;
+}
+.contact_container .contact_details .socials a:hover span:last-child {
+  transform: translateY(0%);
+  
+}
+.contact_container .contact_details .socials a:hover span:first-child {
+  transform: translateY(-200%);
+}
   form{
     width: 90%;
     max-width: 600px;
+    background: #fff;
+    padding: 50px 40px 40px 40px;
+    border: 1px solid #000000;
+    border-radius: 56px;
+    flex: 50%;
+    margin-top: -120px;
+  
   }
-  form .input-group{
-    
-
-
+  form .form_header{
+    color: #000;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 45px;
+    letter-spacing: 0.02em;
   }
+  form .form_header h1{
+    font-weight: 700;
+    font-size: 35px;
+  }
+  form .form_header h3{
+    font-weight: 700;
+    font-size: 1.12em;
+  }
+
   form .input-group{
     margin-bottom: 30px;
     display: flex;
-    width: 100%;
+    /* box-shadow: 0px 2px 0px 0px #D9D9D9; */
+    border-bottom: 2px solid #D9D9D9;
+
+    position: relative;
     padding: 10px;
+
+    
+  }
+  form .input-group input,textarea{
+    width: 100%;
     outline: 0;
-    border: 1px solid black;
-    color: #fff;
+    color: #000;
     background: transparent;
     font-size: 15px;
-  }
-  form .input-group input{
     border: none;
-    background-color: transparent;
     outline: none;
+    resize: none;
+    cursor: text;
+    padding: 0px 10px 5px 10px;
+    
+
   }
-  form .input-group input:focus{
-    border: none;
+  form .input-group input::placeholder,textarea::placeholder{
+    color: #D9D9D9;
 
   }
   form .input-group img{
@@ -1033,10 +1171,14 @@ animation-fill-mode: forwards;
     padding: 10px 0;
     color: #fff;
     outline: none;
-    background-color: transparent;
-    border: 1px solid black;
+    border: none;
+    background-color: #1BB6E7;
+    border-radius: 15px;
     cursor: pointer;
-    width: 100%;
+    width: 24%;
+    height: 50px;
+    display: block;
+    margin-left: auto;
   }
   .subrow{
     display: flex;
