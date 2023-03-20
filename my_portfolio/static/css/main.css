@@ -811,6 +811,7 @@ li{
   margin-right: 10px;
   color: #1BB6E7;
   transition: 0.5s ease-in-out;
+  margin-top: 2.5rem;
 }
 .works .row5 .header a:hover{
   color: #fff;
@@ -868,11 +869,11 @@ li{
     justify-content: start;
     padding-right: 15px;
     padding-left: 30px;
-    padding-top: 26%;
+    padding-top: 52vh;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: auto;
-    margin-top: -24.5%;
+    margin-top: -50vh;
     border-radius: 75px;
 }
 .works .row5 .textblock .title{
@@ -991,7 +992,7 @@ li{
     display: flex;
     line-height: initial;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 3%;
   }
 .contact_container .contact_details .smbox .smmbox span{
   line-height: 1px;
@@ -1144,7 +1145,7 @@ li{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 52px;
+    padding: 40px 5%;
     font-size: calc(16px + 4 * ((100vw - 320px) / 1320));
     font-weight: 600;
 }

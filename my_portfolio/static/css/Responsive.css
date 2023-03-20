@@ -141,9 +141,6 @@ animation-fill-mode: forwards;
         transition: all 1s ease-in-out;
         text-align: bottom;
     }
-    .works .row5 .main-carousel .cell{
-        width: 90%;
-    }
     .menu.visible li{
         text-align: center;
         background: #2979ff;
@@ -219,14 +216,43 @@ animation-fill-mode: forwards;
         display: block;
         text-indent: -55% !important;
         
-    
-    .menu.visible li:first-child a {
+    }
+    .menu.visible li:first-child a{
         line-height: 85vw !important;
         display: block;
         text-indent: -50% !important;
     }
     .works .row5 .main-carousel .cell{
         width: 90%;
+    }
+    .works .row5 .textblock{
+        width: 100%;
+        border-radius: 0px;
+        flex-direction: column;
+    }
+    .works .row5 .textblock .justi p{
+        inline-size: 89%;
+        text-align: start;
+    }
+    .contact_container{
+        flex-direction: column;
+        padding: 15px 5px;
+    }
+    .contact_container .contact_details .smbox_header h2,p{
+        text-align: start;
+      }
+    .contact_container .contact_details .smbox{
+        flex-wrap:nowrap;
+        width: 90%;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    form{
+        margin-top: 0px;
     }
 }
 @media (min-width: 992px) {
@@ -287,15 +313,23 @@ animation-fill-mode: forwards;
     .column_right .intro h2,p{
         text-align: center;
     }
+    .contact_container .contact_details .smbox_header h2,p{
+        text-align: start;
+      }
     .column_right .intro p{
         inline-size: 100%;
     }
+
 }
 @media screen and (max-width: 550px) {
     .column_right .intro h1{
         text-align: left;
         padding-left: calc(100%/5);
     }
+    .subrow{
+        flex-direction: column;
+    }
+    
     
   }
 /* @media screen and (max-width: 900px) {
