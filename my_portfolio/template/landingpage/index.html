@@ -39,10 +39,11 @@
             </svg>
         </div>
     </div>
-    <!-- navbar -->
+    
 
     <!-- hero_section -->
    <div class="hero" id="hero">
+    <!-- navbar -->
     <div class="navbar" id="navbar">
 
         <div class="logo"><img src="{% static 'images\icons\logo1.svg' %}" alt=""></div>
@@ -52,11 +53,11 @@
             </div>
             <div class="menu" id="menu">
                 <ul> 
-                    <li class="shape-circle circle-five"><a href="#hero">Home              </a></li>
-                    <li class="shape-circle circle-four"><a href="#about">About me</a></li>
-                    <li class="shape-circle circle-three"><a href="#services">Services</a></li>
-                    <li class="shape-circle circle-two"><a href="#works">Portfolio</a></li>
-                    <li class="shape-circle circle-one"><a href="#contact" class="cnt">Contact</a></li>
+                    <li class="shape-circle circle-five"><a href="#hero" id="nav_action">Home</a></li>
+                    <li class="shape-circle circle-four"><a href="#about" id="nav_action">About me</a></li>
+                    <li class="shape-circle circle-three"><a href="#services" id="tbn">Services</a></li>
+                    <li class="shape-circle circle-two"><a href="#works" id="tbn">Portfolio</a></li>
+                    <li class="shape-circle circle-one"><a href="#contact" class="cnt" id="tbn">Contact</a></li>
                 </ul>
                
             </div>
@@ -99,8 +100,8 @@
                     </h1>
                     <p>A reputable, full-stack web developer with in-depth experience in web design and development, skilled in providing word-class, clean and modern software solutions to small, medium and large scale enterprises</p>   
                     <div class="btns">
-                        <button>Download CV</button>
-                        <button id="ctn">Contact me</button>
+                        <button><a href="">Download CV</a></button>
+                        <button id="ctn"><a href="#contact">Contact me</a></button>
                     </div>
                 </div>
             </div> 
@@ -190,7 +191,7 @@
                     <div class="content3">
                         <div class="icon"><img class="gimg2" src="{% static 'images\icons\eye.png'%}" alt="image description" width="60" height="60"></i></div>
                         <div class="title">Customizability</div>
-                        <p>Tailored design and functionality to specific needs and preferences, leading to a better user experience. It also allows for the website to stand out and be unique, setting it apart from competitors. Customization can also improve the effectiveness of the website in achieving its goals, such as increasing conversions or engagement.</p>
+                        <p>Tailored design and functionality to specific needs and preferences, for a better user experience. Allowing the website to stand out and be unique. Also improving the effectiveness of the website in achieving it's goals, such as increasing conversions or engagement.</p>
                     </div>
                 </div>
                 <div class="card card3">
@@ -482,14 +483,15 @@
     <div class="footer" id="footer">
         <div class="row7">
             <section class="footer_container">
-                <p class="design_dev">
-                    Copyright © 2023
+                <p class="design_dev copy">
+                    Copyright © 2023,All rights reserved
                 </p>
-                spa
-                <span><img src="{% static 'images\icons\logoent.svg' %}" alt=""></span>
-                <p class="design_dev">
-                    Designed by <span>Valerian</span>
-                </p>
+                <span class="des_dev">
+                    <span><img src="{% static 'images\icons\logoent.svg' %}" alt=""></span>
+                    <p class="design_dev">
+                        Designed by <span>Valerian</span>
+                    </p>
+                </span>
             </section>
         </div>
     </div>

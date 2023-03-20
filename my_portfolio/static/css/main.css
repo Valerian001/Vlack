@@ -15,11 +15,18 @@ body{
 
 html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 
 }
 a{
     text-decoration: none;
+    color: #fff;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 li{
     list-style: none;
 }
@@ -317,6 +324,11 @@ li{
     margin-top: 30px;
     border-radius: 30px;
     transition: 0.5s  ease-in-out;
+}
+.column_right .intro .btns button a{
+  text-decoration: none;
+  color: #fff;
+
 }
 .column_right .intro .btns button:hover{
     background-color: #1BB6E7;
@@ -1151,6 +1163,16 @@ li{
 }
 .row7 .footer_container .design_dev{
   margin: 0;
+}
+.row7 .footer_container .copy{
+  flex:33.3%
+}
+.row7 .footer_container .des_dev{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex: 50%;
 }
 .row7 .footer_container .design_dev span{
   font-size: 25px;
