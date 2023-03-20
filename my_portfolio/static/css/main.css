@@ -9,8 +9,10 @@ body{
     font-family: 'Cormorant Upright';
     font-weight: 700;
     width: 100%;
-
+    overflow-x: hidden;
+    background: #000;
 }
+
 html {
     scroll-behavior: smooth;
 
@@ -110,7 +112,9 @@ li{
     color: #fff;
     width: 100%;
     z-index: 200;
-    position: fixed;
+    position: relative;
+    top:0;
+    transition: 0.5s ease-in-out;
 
 }
 .cnt{
@@ -131,100 +135,30 @@ li{
     gap: 1em;
     font-size: 1.5vw 18px;
 }
-/* .menu li:hover{
-    background-color:#918E85;
-    border-radius: 5px;
-    transition: 0.3s ease;
-} */
 .menu li{
     padding: 5px 14px;
 }
 .circle-one{
-    /* border: 1.8px solid ;
-    border-color: #918E85; */
     border-radius: 25px;
     padding-left: 5px;
     padding-right: 5px;
 }
 .circle-one:hover{
     transition: 0.3s ease-in-out;
-    /* background-color: #918E85; */
 }
-.bars {
-    /*   background-color:pink; */
-    position: absolute;
-    width: 27px;
-    height: 27px;
-    right: 25px;
-    cursor: pointer;
-    z-index: 101;
-    padding-top:9px;
-    border: none;
-  }
-  
-.bar {
-width: 100%;
-height: 4px;
-background-color: #fff;
-position: absolute;
-}
-
-.span::before,
-.span::after {
-content: "";
-display: block;
-background-color: #fff;
-width: 100%;
-height: 4px;
-position: absolute;
-}
-
-.bar::before {
-transform: translateY(-9px);
-}
-
-.bar::after {
-transform: translateY(9px);
-}
-
-.bars.active .bar {
-background-color: transparent;
-}
-
-.bars.active .span::before {
-    animation: top-bar 1s;
-    animation-fill-mode: forwards;
-}
-
-.bars.active .span::after {
-animation: bottom-bar 1s;
-animation-fill-mode: forwards;
-}
-@keyframes top-bar {
-    50% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: rotate(45deg) translateY(0);
-    }
-  }
-  
-  @keyframes bottom-bar {
-    50% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: rotate(-45deg) translateY(0);
-    }
-  }
   
 /* HEro */
 .hero{
-    height: 90vh;
-    width: 100%;
+    
     background: rgb(5, 5, 5);
-
     position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    /* padding-top: 10%; */
+
 }
 .row{
     display: flex;
@@ -232,12 +166,13 @@ animation-fill-mode: forwards;
     flex-wrap: wrap;
     background-color: rgb(5, 5, 5);
     width: 100%;
-    height: 85vh;
+    height: 100%;
     color: #fff;
     justify-content: center;
     align-items: center;
     justify-items: center;
     position: relative;
+    
 }
 .column{
     flex: 50%;
@@ -247,6 +182,7 @@ animation-fill-mode: forwards;
     display: flex;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
 
 .box{
@@ -343,6 +279,8 @@ animation-fill-mode: forwards;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
+    
 }
 .column_right .intro h1{
     margin-top: 15px;
@@ -366,7 +304,6 @@ animation-fill-mode: forwards;
     overflow: hidden;
     justify-content: flex-start;
     align-items: flex-start;
-    height: auto;
 }
 
 .column_right .intro .btns button{
@@ -550,13 +487,16 @@ animation-fill-mode: forwards;
 }
 
 /* aboutme */
+/* .about{
+  display: none;
+} */
 .row2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #000;
     /* background-image: #000; */
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: #fff;
     justify-content: center;
@@ -656,7 +596,7 @@ animation-fill-mode: forwards;
     content: '';
     height: 4px;
     border-radius: 100px;
-    width:102px;
+    width:100px;
     position: relative;
     right:105px;
     bottom: -12px;
@@ -839,8 +779,9 @@ animation-fill-mode: forwards;
 
 .works .row5 .main-carousel .cell{
     display: inline-block;
-    width: 41%;
-    height: 400px;
+    width: calc(100%/2.439);
+    max-height:400px;
+    
     margin: 0 30px;
     background: #8C8;
     background-image: linear-gradient(145deg,rgba(0, 0, 0, 0.958) 46%, rgba(27,182,231,0.4234068627450981) 90%);
@@ -991,7 +932,7 @@ animation-fill-mode: forwards;
   .row6{
     position: relative;
     background-color: #000;
-    padding-top: 10%;
+    padding-top: 14%;
     /* padding-bottom: 7%; */
     display: flex;
     align-items: center;
