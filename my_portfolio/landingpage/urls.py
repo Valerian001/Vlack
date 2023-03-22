@@ -1,7 +1,8 @@
 from django.urls import path
-from landingpage.views import PageView
+from .views import index
 
 app_name = 'landingpage'
 urlpatterns =[
-    path("", PageView.as_view(), name='page')
+    path("", index, name='page')
+    # path("thankyou", ContactView.as_view(), name='contact')
 ]

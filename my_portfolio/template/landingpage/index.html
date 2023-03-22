@@ -100,7 +100,7 @@
                     </h1>
                     <p>A reputable, full-stack web developer with in-depth experience in web design and development, skilled in providing word-class, clean and modern software solutions to small, medium and large scale enterprises</p>   
                     <div class="btns">
-                        <button><a href="">Download CV</a></button>
+                        <button><a href="" download="Valerian's-Resume">Download CV</a></button>
                         <button id="ctn"><a href="#contact">Contact me</a></button>
                     </div>
                 </div>
@@ -437,7 +437,8 @@
                     </div>
                 </section>
                 <section class="form">
-                    <form action="/your-name/" method="post">
+                    <form method="POST">
+                        {% csrf_token %}
                         <div class="form_header">
                             <h1>Send a Message</h1>
                             <h3>Feel free to reach us if you need any assistance.</h3>
@@ -445,28 +446,28 @@
                         <div class="subrow">
                             <div class="input-group">
                                 <img src="{% static 'images\icons\user_1.png'%}" alt="">
-                                <input id="name" type="text" name="your_name" value="{{ current_name }}" placeholder="Full Name">
+                                <input id="name" type="text" name="your_Name" {% if form.is_bound %}value="{{ form.your_Name.value }}"{% endif %} placeholder="Full Name">
                             </div>
                             <div class="input-group">
                                 <img src="{% static 'images\icons\envelope.png'%}" alt="">
-                                <input id="email" type="email" name="your_name" value="{{ current_name }}"placeholder="Email">
+                                <input id="email" type="email" name="your_Email" {% if form.is_bound %}value="{{ form.your_Email.value }}"{% endif %} placeholder="Email">
                             </div>
                         </div>
                         <div class="subrow">
                             <div class="input-group">
                                 <img src="{% static 'images\icons\mobile-button.png'%}" alt="">
-                                <input id="phone" type="text" name="your_name" value="{{ current_name }}" placeholder="Phone Number">
+                                <input id="phone" type="text" name="your_Phone" {% if form.is_bound %}value="{{ form.your_Phone.value }}"{% endif %} placeholder="Phone Number">
                             </div>
                             <div class="input-group">
                                 <img src="{% static 'images\icons\city.png'%}" alt="">
-                                <input id="company" type="text" name="your_name" value="{{ current_name }}" placeholder="Company Name">
+                                <input id="company" type="text" name="your_Company" {% if form.is_bound %}value="{{ form.your_Company.value }}"{% endif %} placeholder="Company Name">
                             </div>
                         </div>
                         
                         
                         <div class="input-group">
                             <img src="{% static 'images\icons\comments.png'%}" alt="">
-                            <textarea name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+                            <textarea name="Message" id="message" cols="30" rows="8" {% if form.is_bound %}value="{{ form.Message.value }}"{% endif %} placeholder="Message"></textarea>
                         </div>
                        
                         <button type="submit">Submit</button>
