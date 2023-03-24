@@ -4,5 +4,4 @@ from .views import index
 app_name = 'landingpage'
 urlpatterns =[
     path("", index, name='page')
-    # path("thankyou", ContactView.as_view(), name='contact')
 ]

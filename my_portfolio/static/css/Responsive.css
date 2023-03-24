@@ -379,24 +379,4 @@ animation-fill-mode: forwards;
     
     
   }
-/* @media screen and (max-width: 900px) {
-    .carousel img{
-      width: calc(100% / 2);
-    }
-  }
-  
-@media screen and (max-width: 550px) {
-    .carousel img{
-      width: 100%;
-    }
-  } */
-/* @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-} */
+
